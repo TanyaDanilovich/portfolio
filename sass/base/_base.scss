@@ -1,0 +1,128 @@
+/*===================Сброс стилей=============*/
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+body {
+	font-size: 1.6rem;
+	font-family: "Inter", Verdana, sans-serif;
+	background-color: var(--body-color);
+	/* 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center; */
+}
+h1 {
+	@extend %font-Merriweather;
+	font-size: 6rem;
+	line-height: 120px;
+	color: $color-light;
+	margin: 0;
+}
+h2 {
+	@extend %font-Merriweather;
+	font-size: 4rem;
+	line-height: 80px;
+	text-align: center;
+	color: var(--section-title-color);
+	margin: 0;
+	padding-top: 100px;
+	padding-bottom: 60px;
+	@include media-tablet {
+		padding-bottom: 65px;
+	}
+}
+h3 {
+	@extend %font-Merriweather;
+	font-size: 2.8rem;
+	line-height: 56px;
+	text-align: center;
+	color: var(--price-title-color);
+	margin: 0;
+}
+h4 {
+	@extend %font-inter-normal-2;
+	font-weight: bold;
+	line-height: 4rem;
+	text-align: center;
+	color: var(--content-color);
+	margin: 0;
+	padding-top: 100px;
+	letter-spacing: 0.3px;
+	@include media-tablet {
+		padding-top: 80px;
+	}
+}
+
+p {
+	@extend %font-inter-normal-2;
+	line-height: 4rem;
+	text-align: center;
+	color: var(--content-color);
+	margin: 0;
+}
+a {
+	cursor: pointer;
+}

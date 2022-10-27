@@ -1,0 +1,71 @@
+.skills__wrapper {
+	margin: 0 auto;
+	//border: 1px solid red;
+}
+
+.skills__container {
+	display: flex;
+
+	justify-content: space-between;
+	margin: 0 auto;
+	@media screen and (max-width: 999px) {
+		flex-wrap: wrap;
+	}
+
+	//	border: 1px solid red;
+	@include media-tablet {
+		padding: 0 24px 7px 20px;
+	}
+	@media screen and (max-width: 744px) {
+		justify-content: center;
+	}
+}
+.skills__items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	max-width: 320px;
+	row-gap: 20px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	//border: 5px solid green;
+	@include media-tablet {
+		margin-bottom: 65px;
+	}
+}
+
+.skills__items:nth-child(1) {
+	background-image: url(..//..//assets/svg/camera.svg);
+	background-size: 62px 50px;
+}
+
+.skills__items:nth-child(2) {
+	background-image: url(..//..//assets/svg/video.svg);
+	background-size: 60px 50px;
+}
+
+.skills__items:nth-child(3) {
+	background-image: url(..//..//assets/svg/image.svg);
+	background-size: 66px 50px;
+}
+
+.skills__items:nth-child(4) {
+	background-image: url(..//..//assets/svg/mic.svg);
+	background-size: 32px 50px;
+}
+
+.skills__items__content {
+	//	border: 1px solid red;
+	font-size: 1.8rem;
+	line-height: 3.6rem;
+	padding: 0 18px;
+	@include media-tablet {
+		font-size: 18px;
+		line-height: 22px;
+		//column-gap: 10px;
+		//margin: 0 25px;
+	}
+}
